@@ -1,0 +1,78 @@
+{
+  "format": "omp-session-archive/v1",
+  "generatedAt": "2026-11-24T04:21:36.352Z",
+  "source": {
+    "sessionFile": "/home/asdf/.omp/agent/sessions/-Downloads/2026-11-20T19-12-59-479Z_01a1fa60-5457-7205-b428-ca947536b297.jsonl",
+    "sessionId": "01a1fa60-5457-7205-b428-ca947536b297",
+    "cwd": "/home/asdf/Downloads",
+    "title": "󰎐 MIX: Mix nav prompts over music"
+  },
+  "main": {
+    "entries": 232,
+    "bytes": 686392
+  },
+  "subagents": [],
+  "artifacts": [
+    {
+      "file": "artifacts/15.bash.log",
+      "bytes": 16933
+    },
+    {
+      "file": "artifacts/32.bash.log",
+      "bytes": 5959
+    },
+    {
+      "file": "artifacts/1.read.log",
+      "bytes": 39740
+    },
+    {
+      "file": "artifacts/27.bash.log",
+      "bytes": 7327
+    },
+    {
+      "file": "artifacts/28.bash.log",
+      "bytes": 10887
+    }
+  ],
+  "agents": {
+    "count": 1,
+    "agents": [
+      {
+        "id": "Main",
+        "name": "main",
+        "kind": "main",
+        "depth": 0,
+        "model": "opencode-go/deepseek-v4.1-flash",
+        "hasSystemPrompt": true,
+        "ended": false
+      }
+    ]
+  },
+  "jobs": {
+    "liveAgents": [
+      "Main"
+    ],
+    "completed": 2,
+    "completedJobs": [
+      {
+        "agent": "main",
+        "entryId": "3abdebcc",
+        "at": "2026-11-24T04:04:20.688Z",
+        "label": "bg_1",
+        "status": "completed"
+      },
+      {
+        "agent": "main",
+        "entryId": "c79f0f21",
+        "at": "2026-11-24T04:12:42.049Z",
+        "label": "bg_2",
+        "status": "completed"
+      }
+    ]
+  },
+  "totals": {
+    "files": 11,
+    "bytes": 2248819
+  },
+  "omitted": []
+}

@@ -1,0 +1,301 @@
+URL: https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setWillPauseWhenDucked(boolean)
+Content-Type: text/markdown
+Method: md-suffix
+Notes: Found .md suffix version
+
+---
+
+# AudioFocusRequest.Builder
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+Summary:[Ctors](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#pubctors)\|[Methods](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#pubmethods)\|[Inherited Methods](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#inhmethods)  
+
+# AudioFocusRequest.Builder
+
+*** ** * ** ***
+
+[Kotlin](https://developer.android.com/reference/kotlin/android/media/AudioFocusRequest.Builder "View this page in Kotlin")\|Java
+
+`
+public
+static
+final
+
+class
+AudioFocusRequest.Builder
+`  
+`
+
+extends `[Object](https://developer.android.com/reference/java/lang/Object)`
+
+``
+
+`
+
+|---|-----------------------------------------|
+| [java.lang.Object](https://developer.android.com/reference/java/lang/Object) ||
+| ↳ | android.media.AudioFocusRequest.Builder |
+
+<br />
+
+*** ** * ** ***
+
+Builder class for[AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest)objects.
+
+See[AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest)for an example of building an instance with this builder.  
+The default values for the instance to be built are:
+
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| focus listener and handler   | none                                                                                                                                         |
+| `AudioAttributes`            | attributes with usage set to[AudioAttributes.USAGE_MEDIA](https://developer.android.com/reference/android/media/AudioAttributes#USAGE_MEDIA) |
+| pauses on duck               | false                                                                                                                                        |
+| supports delayed focus grant | false                                                                                                                                        |
+
+<br />
+
+## Summary
+
+|                                                                                                                                                                  ### Public constructors                                                                                                                                                                  ||
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| ` `[Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#Builder(android.media.AudioFocusRequest))`(`[AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest)` requestToCopy) ` Constructs a new`Builder`with all the properties of the`AudioFocusRequest`passed as parameter. |
+| ` `[Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#Builder(int))`(int focusGain) ` Constructs a new`Builder`, and specifies how audio focus will be requested.                                                                                                                                               |
+
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ### Public methods                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ||
+|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ` `[AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest)                 | ` `[build](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#build())`() ` Builds a new`AudioFocusRequest`instance combining all the information gathered by this`Builder`'s configuration methods.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setAcceptsDelayedFocusGain](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setAcceptsDelayedFocusGain(boolean))`(boolean acceptsDelayedFocusGain) ` Marks this focus request as compatible with delayed focus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setAudioAttributes](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setAudioAttributes(android.media.AudioAttributes))`(`[AudioAttributes](https://developer.android.com/reference/android/media/AudioAttributes)` attributes) ` Sets the[AudioAttributes](https://developer.android.com/reference/android/media/AudioAttributes)to be associated with the focus request, and which describe the use case for which focus is requested.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setFocusGain](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setFocusGain(int))`(int focusGain) ` Sets the type of focus gain that will be requested.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setForceDucking](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setForceDucking(boolean))`(boolean forceDucking) ` Marks this focus request as forcing ducking, regardless of the conditions in which the system would or would not enforce ducking.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setOnAudioFocusChangeListener](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setOnAudioFocusChangeListener(android.media.AudioManager.OnAudioFocusChangeListener))`(`[AudioManager.OnAudioFocusChangeListener](https://developer.android.com/reference/android/media/AudioManager.OnAudioFocusChangeListener)` listener) ` Sets the listener called when audio focus changes after being requested with[AudioManager.requestAudioFocus(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#requestAudioFocus(android.media.AudioFocusRequest)), and until being abandoned with[AudioManager.abandonAudioFocusRequest(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#abandonAudioFocusRequest(android.media.AudioFocusRequest)).                                                                                                        |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setOnAudioFocusChangeListener](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setOnAudioFocusChangeListener(android.media.AudioManager.OnAudioFocusChangeListener,%20android.os.Handler))`(`[AudioManager.OnAudioFocusChangeListener](https://developer.android.com/reference/android/media/AudioManager.OnAudioFocusChangeListener)` listener, `[Handler](https://developer.android.com/reference/android/os/Handler)` handler) ` Sets the listener called when audio focus changes after being requested with[AudioManager.requestAudioFocus(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#requestAudioFocus(android.media.AudioFocusRequest)), and until being abandoned with[AudioManager.abandonAudioFocusRequest(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#abandonAudioFocusRequest(android.media.AudioFocusRequest)). |
+| ` `[AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | ` `[setWillPauseWhenDucked](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setWillPauseWhenDucked(boolean))`(boolean pauseOnDuck) ` Declare the intended behavior of the application with regards to audio ducking.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+| ### Inherited methods |
+|-----------------------|---|
+| From class` `[java.lang.Object](https://developer.android.com/reference/java/lang/Object)` ` |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| | ` `[Object](https://developer.android.com/reference/java/lang/Object)          | ` `[clone](https://developer.android.com/reference/java/lang/Object#clone())`() ` Creates and returns a copy of this object.                                                                                                                                                      | | ` boolean`                                                                     | ` `[equals](https://developer.android.com/reference/java/lang/Object#equals(java.lang.Object))`(`[Object](https://developer.android.com/reference/java/lang/Object)` obj) ` Indicates whether some other object is "equal to" this one.                                           | | ` void`                                                                        | ` `[finalize](https://developer.android.com/reference/java/lang/Object#finalize())`() ` Called by the garbage collector on an object when garbage collection determines that there are no more references to the object.                                                          | | ` final `[Class](https://developer.android.com/reference/java/lang/Class)`<?>` | ` `[getClass](https://developer.android.com/reference/java/lang/Object#getClass())`() ` Returns the runtime class of this`Object`.                                                                                                                                                | | ` int`                                                                         | ` `[hashCode](https://developer.android.com/reference/java/lang/Object#hashCode())`() ` Returns a hash code value for the object.                                                                                                                                                 | | ` final void`                                                                  | ` `[notify](https://developer.android.com/reference/java/lang/Object#notify())`() ` Wakes up a single thread that is waiting on this object's monitor.                                                                                                                            | | ` final void`                                                                  | ` `[notifyAll](https://developer.android.com/reference/java/lang/Object#notifyAll())`() ` Wakes up all threads that are waiting on this object's monitor.                                                                                                                         | | ` `[String](https://developer.android.com/reference/java/lang/String)          | ` `[toString](https://developer.android.com/reference/java/lang/Object#toString())`() ` Returns a string representation of the object.                                                                                                                                            | | ` final void`                                                                  | ` `[wait](https://developer.android.com/reference/java/lang/Object#wait(long,%20int))`(long timeoutMillis, int nanos) ` Causes the current thread to wait until it is awakened, typically by being*notified* or*interrupted*, or until a certain amount of real time has elapsed. | | ` final void`                                                                  | ` `[wait](https://developer.android.com/reference/java/lang/Object#wait(long))`(long timeoutMillis) ` Causes the current thread to wait until it is awakened, typically by being*notified* or*interrupted*, or until a certain amount of real time has elapsed.                   | | ` final void`                                                                  | ` `[wait](https://developer.android.com/reference/java/lang/Object#wait())`() ` Causes the current thread to wait until it is awakened, typically by being*notified* or*interrupted*.                                                                                             | ||
+
+## Public constructors
+
+### Builder
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public Builder (AudioFocusRequest requestToCopy)
+```
+
+Constructs a new`Builder`with all the properties of the`AudioFocusRequest`passed as parameter. Use this method when you want a new request to differ only by some properties.
+
+<br />
+
+|                                               Parameters                                               ||
+|-----------------|---------------------------------------------------------------------------------------|
+| `requestToCopy` | `AudioFocusRequest`: the non-null`AudioFocusRequest`to build a duplicate from. <br /> |
+
+|                                                                        Throws                                                                         ||
+|--------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| [IllegalArgumentException](https://developer.android.com/reference/java/lang/IllegalArgumentException) | thrown when a null`AudioFocusRequest`is used. |
+
+### Builder
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public Builder (int focusGain)
+```
+
+Constructs a new`Builder`, and specifies how audio focus will be requested. Valid values for focus requests are[AudioManager.AUDIOFOCUS_GAIN](https://developer.android.com/reference/android/media/AudioManager#AUDIOFOCUS_GAIN),[AudioManager.AUDIOFOCUS_GAIN_TRANSIENT](https://developer.android.com/reference/android/media/AudioManager#AUDIOFOCUS_GAIN_TRANSIENT),[AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK](https://developer.android.com/reference/android/media/AudioManager#AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK), and[AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE](https://developer.android.com/reference/android/media/AudioManager#AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE).
+
+By default there is no focus change listener, delayed focus is not supported, ducking is suitable for the application, and the`AudioAttributes`have a usage of[AudioAttributes.USAGE_MEDIA](https://developer.android.com/reference/android/media/AudioAttributes#USAGE_MEDIA).
+
+<br />
+
+|                                   Parameters                                   ||
+|-------------|-------------------------------------------------------------------|
+| `focusGain` | `int`: the type of audio focus gain that will be requested <br /> |
+
+|                                                                         Throws                                                                         ||
+|--------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| [IllegalArgumentException](https://developer.android.com/reference/java/lang/IllegalArgumentException) | thrown when an invalid focus gain type is used |
+
+## Public methods
+
+### build
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest build ()
+```
+
+Builds a new`AudioFocusRequest`instance combining all the information gathered by this`Builder`'s configuration methods.
+
+<br />
+
+|                                                                                          Returns                                                                                          ||
+|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest) | the`AudioFocusRequest`instance qualified by all the properties set on this`Builder`. <br /> |
+
+|                                                                                                                      Throws                                                                                                                       ||
+|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| [IllegalStateException](https://developer.android.com/reference/java/lang/IllegalStateException) | thrown when attempting to build a focus request that is set to accept delayed focus, or to pause on duck, but no focus change listener was set. |
+
+### setAcceptsDelayedFocusGain
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setAcceptsDelayedFocusGain (boolean acceptsDelayedFocusGain)
+```
+
+Marks this focus request as compatible with delayed focus. See more details about delayed focus in the[AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest)class documentation.
+
+<br />
+
+|                                                                                                                                                                                                                                                Parameters                                                                                                                                                                                                                                                 ||
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `acceptsDelayedFocusGain` | `boolean`: use`true`if the application supports delayed focus. If`true`, note that you must also set a focus listener to be notified of delayed focus gain, with[setOnAudioFocusChangeListener(android.media.AudioManager.OnAudioFocusChangeListener, android.os.Handler)](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setOnAudioFocusChangeListener(android.media.AudioManager.OnAudioFocusChangeListener,%20android.os.Handler)). <br /> |
+
+|                                                                                Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance This value cannot be`null`. <br /> |
+
+### setAudioAttributes
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setAudioAttributes (AudioAttributes attributes)
+```
+
+Sets the[AudioAttributes](https://developer.android.com/reference/android/media/AudioAttributes)to be associated with the focus request, and which describe the use case for which focus is requested. As the focus requests typically precede audio playback, this information is used on certain platforms to declare the subsequent playback use case. It is therefore good practice to use in this method the same`AudioAttributes`as used for playback, see for example[MediaPlayer.setAudioAttributes(AudioAttributes)](https://developer.android.com/reference/android/media/MediaPlayer#setAudioAttributes(android.media.AudioAttributes))in`MediaPlayer`or[AudioTrack.Builder.setAudioAttributes(AudioAttributes)](https://developer.android.com/reference/android/media/AudioTrack.Builder#setAudioAttributes(android.media.AudioAttributes))in`AudioTrack`.
+
+<br />
+
+|                                                                                      Parameters                                                                                       ||
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `attributes` | `AudioAttributes`: the[AudioAttributes](https://developer.android.com/reference/android/media/AudioAttributes)for the focus request. This value cannot be`null`. <br /> |
+
+|                                                                                 Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance. This value cannot be`null`. <br /> |
+
+|                                                                   Throws                                                                   ||
+|------------------------------------------------------------------------------------------------|--------------------------------------------|
+| [NullPointerException](https://developer.android.com/reference/java/lang/NullPointerException) | thrown when using null for the attributes. |
+
+### setFocusGain
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setFocusGain (int focusGain)
+```
+
+Sets the type of focus gain that will be requested. Use this method to replace the focus gain when building a request by modifying an existing`AudioFocusRequest`instance.
+
+<br />
+
+|                                   Parameters                                    ||
+|-------------|--------------------------------------------------------------------|
+| `focusGain` | `int`: the type of audio focus gain that will be requested. <br /> |
+
+|                                                                                Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance This value cannot be`null`. <br /> |
+
+|                                                                         Throws                                                                         ||
+|--------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| [IllegalArgumentException](https://developer.android.com/reference/java/lang/IllegalArgumentException) | thrown when an invalid focus gain type is used |
+
+### setForceDucking
+
+Added in[API level 28](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setForceDucking (boolean forceDucking)
+```
+
+Marks this focus request as forcing ducking, regardless of the conditions in which the system would or would not enforce ducking. Forcing ducking will only be honored when requesting AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK with an[AudioAttributes](https://developer.android.com/reference/android/media/AudioAttributes)usage of[AudioAttributes.USAGE_ASSISTANCE_ACCESSIBILITY](https://developer.android.com/reference/android/media/AudioAttributes#USAGE_ASSISTANCE_ACCESSIBILITY), coming from an accessibility service, and will be ignored otherwise.
+
+<br />
+
+|                       Parameters                        ||
+|----------------|-----------------------------------------|
+| `forceDucking` | `boolean`:`true`to force ducking <br /> |
+
+|                                                                                Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance This value cannot be`null`. <br /> |
+
+### setOnAudioFocusChangeListener
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setOnAudioFocusChangeListener (AudioManager.OnAudioFocusChangeListener listener)
+```
+
+Sets the listener called when audio focus changes after being requested with[AudioManager.requestAudioFocus(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#requestAudioFocus(android.media.AudioFocusRequest)), and until being abandoned with[AudioManager.abandonAudioFocusRequest(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#abandonAudioFocusRequest(android.media.AudioFocusRequest)). Note that only focus changes (gains and losses) affecting the focus owner are reported, not gains and losses of other focus requesters in the system.  
+Notifications are delivered on the[Looper](https://developer.android.com/reference/android/os/Looper)associated with the one of the creation of the[AudioManager](https://developer.android.com/reference/android/media/AudioManager)used to request focus (see[AudioManager.requestAudioFocus(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#requestAudioFocus(android.media.AudioFocusRequest))).
+
+<br />
+
+|                                                                    Parameters                                                                    ||
+|------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `listener` | `AudioManager.OnAudioFocusChangeListener`: the listener receiving the focus change notifications. This value cannot be`null`. <br /> |
+
+|                                                                                 Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance. This value cannot be`null`. <br /> |
+
+|                                                                   Throws                                                                   ||
+|------------------------------------------------------------------------------------------------|--------------------------------------------|
+| [NullPointerException](https://developer.android.com/reference/java/lang/NullPointerException) | thrown when a null focus listener is used. |
+
+### setOnAudioFocusChangeListener
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setOnAudioFocusChangeListener (AudioManager.OnAudioFocusChangeListener listener, 
+                Handler handler)
+```
+
+Sets the listener called when audio focus changes after being requested with[AudioManager.requestAudioFocus(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#requestAudioFocus(android.media.AudioFocusRequest)), and until being abandoned with[AudioManager.abandonAudioFocusRequest(AudioFocusRequest)](https://developer.android.com/reference/android/media/AudioManager#abandonAudioFocusRequest(android.media.AudioFocusRequest)). Note that only focus changes (gains and losses) affecting the focus owner are reported, not gains and losses of other focus requesters in the system.
+
+<br />
+
+|                                                                                       Parameters                                                                                        ||
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `listener` | `AudioManager.OnAudioFocusChangeListener`: the listener receiving the focus change notifications. This value cannot be`null`. <br />                                        |
+| `handler`  | `Handler`: the[Handler](https://developer.android.com/reference/android/os/Handler)for the thread on which to execute the notifications. This value cannot be`null`. <br /> |
+
+|                                                                                 Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance. This value cannot be`null`. <br /> |
+
+|                                                                        Throws                                                                         ||
+|------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| [NullPointerException](https://developer.android.com/reference/java/lang/NullPointerException) | thrown when a null focus listener or handler is used. |
+
+### setWillPauseWhenDucked
+
+Added in[API level 26](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels)  
+
+```
+public AudioFocusRequest.Builder setWillPauseWhenDucked (boolean pauseOnDuck)
+```
+
+Declare the intended behavior of the application with regards to audio ducking. See more details in the[AudioFocusRequest](https://developer.android.com/reference/android/media/AudioFocusRequest)class documentation.
+
+<br />
+
+|                                                                                                                                                                                                                                                                                                                                Parameters                                                                                                                                                                                                                                                                                                                                 ||
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `pauseOnDuck` | `boolean`: use`true`if the application intends to pause audio playback when losing focus with[AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK](https://developer.android.com/reference/android/media/AudioManager#AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK). If`true`, note that you must also set a focus listener to receive such an event, with[setOnAudioFocusChangeListener(android.media.AudioManager.OnAudioFocusChangeListener, android.os.Handler)](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder#setOnAudioFocusChangeListener(android.media.AudioManager.OnAudioFocusChangeListener,%20android.os.Handler)). <br /> |
+
+|                                                                                 Returns                                                                                 ||
+|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| [AudioFocusRequest.Builder](https://developer.android.com/reference/android/media/AudioFocusRequest.Builder) | this`Builder`instance. This value cannot be`null`. <br /> |

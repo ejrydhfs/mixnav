@@ -168,6 +168,12 @@ and "Start route" buttons, plus a live log of focus decisions.
   consent and re-rendering captured audio invites echo/latency. Focus-free playback is enough.
 - The `bed` app is a test fixture, not a music player.
 
+## Session record
+
+The full build/test transcript for this repo (including every `dumpsys` capture) is in
+[`session/`](session/). Open `session/viewer.html` in a browser for the rendered view; the raw
+transcript is `session/session.jsonl` and untruncated tool logs are under `session/artifacts/`.
+
 ## Layout
 
 ```
